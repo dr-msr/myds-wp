@@ -766,6 +766,11 @@
 			"area": "header"
 		},
 		{
+			"name": "header-masthead",
+			"title": "Header with government masthead",
+			"area": "header"
+		},
+		{
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"
@@ -774,7 +779,7 @@
 	"customTemplates": [
 		{
 			"name": "page-wide",
-			"title": "Wide page",
+			"title": "Full width, no title",
 			"postTypes": [
 				"page"
 			]

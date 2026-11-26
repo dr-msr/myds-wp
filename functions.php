@@ -132,6 +132,14 @@ add_action(
 		}
 
 		register_block_pattern_category(
+			'myds-pages',
+			array(
+				'label'       => __( 'MYDS pages', 'myds-wp' ),
+				'description' => __( 'Starter layouts for whole pages.', 'myds-wp' ),
+			)
+		);
+
+		register_block_pattern_category(
 			'myds',
 			array(
 				'label'       => __( 'MYDS', 'myds-wp' ),

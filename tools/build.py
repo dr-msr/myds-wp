@@ -310,10 +310,11 @@ def theme_json() -> dict:
         },
         "templateParts": [
             {"name": "header", "title": "Header", "area": "header"},
+            {"name": "header-masthead", "title": "Header with government masthead", "area": "header"},
             {"name": "footer", "title": "Footer", "area": "footer"},
         ],
         "customTemplates": [
-            {"name": "page-wide", "title": "Wide page", "postTypes": ["page"]},
+            {"name": "page-wide", "title": "Full width, no title", "postTypes": ["page"]},
         ],
     }
 
@@ -345,6 +346,8 @@ def main() -> None:
     for slug, title, src in (("red", "Red", "danger"), ("green", "Green", "success")):
         (ROOT / "styles" / f"{slug}.json").write_text(json.dumps(variation(title, src), indent="\t") + "\n")
     print(f"primitives {len(PRIM)}, semantic tokens {len(LIGHT)} light / {len(DARK)} dark")
+    import catalog
+    catalog.main()
 
 
 if __name__ == "__main__":

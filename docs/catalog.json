@@ -1,0 +1,1084 @@
+{
+	"patterns": [
+		{
+			"file": "patterns/accordion.php",
+			"title": "Accordion",
+			"slug": "myds-wp/accordion",
+			"categories": [
+				"myds"
+			],
+			"description": "Stacked questions that open one answer at a time.",
+			"keywords": [
+				"accordion",
+				"faq",
+				"collapse"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/buttons.php",
+			"title": "Buttons",
+			"slug": "myds-wp/buttons",
+			"categories": [
+				"myds"
+			],
+			"description": "Every MYDS button variant: primary, default and danger, as fill, outline and ghost.",
+			"keywords": [
+				"button",
+				"call to action"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/callout-danger.php",
+			"title": "Callout: danger",
+			"slug": "myds-wp/callout-danger",
+			"categories": [
+				"myds"
+			],
+			"description": "A short danger message with an icon, a title and a description.",
+			"keywords": [
+				"alert",
+				"notice",
+				"callout"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/callout-info.php",
+			"title": "Callout: info",
+			"slug": "myds-wp/callout-info",
+			"categories": [
+				"myds"
+			],
+			"description": "A short info message with an icon, a title and a description.",
+			"keywords": [
+				"alert",
+				"notice",
+				"callout"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/callout-success.php",
+			"title": "Callout: success",
+			"slug": "myds-wp/callout-success",
+			"categories": [
+				"myds"
+			],
+			"description": "A short success message with an icon, a title and a description.",
+			"keywords": [
+				"alert",
+				"notice",
+				"callout"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/callout-warning.php",
+			"title": "Callout: warning",
+			"slug": "myds-wp/callout-warning",
+			"categories": [
+				"myds"
+			],
+			"description": "A short warning message with an icon, a title and a description.",
+			"keywords": [
+				"alert",
+				"notice",
+				"callout"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/details.php",
+			"title": "Details",
+			"slug": "myds-wp/details",
+			"categories": [
+				"myds"
+			],
+			"description": "Extra information a user can open without leaving the page.",
+			"keywords": [
+				"details",
+				"disclosure",
+				"more information"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/footer.php",
+			"title": "Footer",
+			"slug": "myds-wp/footer",
+			"categories": [
+				"footer",
+				"myds"
+			],
+			"block_types": [
+				"core/template-part/footer"
+			],
+			"keywords": [
+				"footer",
+				"links",
+				"copyright",
+				"social"
+			],
+			"description": "Site information, link groups, copyright and legal links.",
+			"inserter": true
+		},
+		{
+			"file": "patterns/grid-content-sidebar.php",
+			"title": "Grid: content and sidebar",
+			"slug": "myds-wp/grid-content-sidebar",
+			"categories": [
+				"myds"
+			],
+			"description": "Eight columns of content beside a four column sidebar on desktop.",
+			"keywords": [
+				"grid",
+				"sidebar",
+				"12-8-4"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/grid-halves.php",
+			"title": "Grid: two columns",
+			"slug": "myds-wp/grid-halves",
+			"categories": [
+				"myds"
+			],
+			"description": "Two equal columns on tablet and desktop, stacked on mobile.",
+			"keywords": [
+				"grid",
+				"columns",
+				"12-8-4"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/grid-thirds.php",
+			"title": "Grid: three columns",
+			"slug": "myds-wp/grid-thirds",
+			"categories": [
+				"myds"
+			],
+			"description": "Three equal columns on desktop, stacked below.",
+			"keywords": [
+				"grid",
+				"columns",
+				"12-8-4"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/header-masthead.php",
+			"title": "Header with government masthead",
+			"slug": "myds-wp/header-masthead",
+			"categories": [
+				"header",
+				"myds"
+			],
+			"block_types": [
+				"core/template-part/header"
+			],
+			"keywords": [
+				"header",
+				"masthead",
+				"government",
+				"official",
+				"navbar"
+			],
+			"description": "The government masthead above the navbar. For government sites only.",
+			"inserter": true
+		},
+		{
+			"file": "patterns/header.php",
+			"title": "Header",
+			"slug": "myds-wp/header",
+			"categories": [
+				"header",
+				"myds"
+			],
+			"block_types": [
+				"core/template-part/header"
+			],
+			"keywords": [
+				"header",
+				"navbar",
+				"navigation",
+				"menu",
+				"dark mode"
+			],
+			"description": "Navbar with logo, site title, menu and the light and dark switch.",
+			"inserter": true
+		},
+		{
+			"file": "patterns/masthead.php",
+			"title": "Government masthead",
+			"slug": "myds-wp/masthead",
+			"categories": [
+				"header",
+				"myds"
+			],
+			"description": "The \"Official Malaysian Government Website\" bar. For government sites only; place it above the header.",
+			"keywords": [
+				"masthead",
+				"government",
+				"official"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/page-about.php",
+			"title": "About",
+			"slug": "myds-wp/page-about",
+			"categories": [
+				"myds-pages"
+			],
+			"description": "About page: introduction, vision and mission, functions, leadership table and a link to the organisation chart.",
+			"keywords": [
+				"about",
+				"about us",
+				"organisation",
+				"vision",
+				"mission",
+				"leadership",
+				"profile"
+			],
+			"block_types": [
+				"core/post-content"
+			],
+			"post_types": [
+				"page"
+			],
+			"viewport_width": "1440",
+			"inserter": true
+		},
+		{
+			"file": "patterns/page-agency-home.php",
+			"title": "Agency home",
+			"slug": "myds-wp/page-agency-home",
+			"categories": [
+				"myds-pages"
+			],
+			"description": "Home page for a government agency or public service: hero, popular services, a notice, latest news and a help band.",
+			"keywords": [
+				"home",
+				"landing",
+				"front page",
+				"agency",
+				"government",
+				"services"
+			],
+			"block_types": [
+				"core/post-content"
+			],
+			"post_types": [
+				"page"
+			],
+			"viewport_width": "1440",
+			"inserter": true
+		},
+		{
+			"file": "patterns/page-blog.php",
+			"title": "Blog",
+			"slug": "myds-wp/page-blog",
+			"categories": [
+				"myds-pages"
+			],
+			"description": "Blog page: a single-column list of posts with date, title and excerpt, and pagination.",
+			"keywords": [
+				"blog",
+				"articles",
+				"posts",
+				"writing",
+				"journal"
+			],
+			"block_types": [
+				"core/post-content"
+			],
+			"post_types": [
+				"page"
+			],
+			"viewport_width": "1440",
+			"inserter": true
+		},
+		{
+			"file": "patterns/page-contact.php",
+			"title": "Contact",
+			"slug": "myds-wp/page-contact",
+			"categories": [
+				"myds-pages"
+			],
+			"description": "Contact page: office address, call centre, counter hours table and other channels.",
+			"keywords": [
+				"contact",
+				"contact us",
+				"address",
+				"hours",
+				"phone",
+				"email",
+				"location"
+			],
+			"block_types": [
+				"core/post-content"
+			],
+			"post_types": [
+				"page"
+			],
+			"viewport_width": "1440",
+			"inserter": true
+		},
+		{
+			"file": "patterns/page-faq.php",
+			"title": "Frequently asked questions",
+			"slug": "myds-wp/page-faq",
+			"categories": [
+				"myds-pages"
+			],
+			"description": "FAQ page: questions grouped under headings, each answer in an accordion item.",
+			"keywords": [
+				"faq",
+				"questions",
+				"help",
+				"answers",
+				"support"
+			],
+			"block_types": [
+				"core/post-content"
+			],
+			"post_types": [
+				"page"
+			],
+			"viewport_width": "1440",
+			"inserter": true
+		},
+		{
+			"file": "patterns/page-news.php",
+			"title": "News",
+			"slug": "myds-wp/page-news",
+			"categories": [
+				"myds-pages"
+			],
+			"description": "News page: a short introduction followed by a three-column grid of the latest posts with pagination.",
+			"keywords": [
+				"news",
+				"press",
+				"media",
+				"announcements",
+				"updates",
+				"posts"
+			],
+			"block_types": [
+				"core/post-content"
+			],
+			"post_types": [
+				"page"
+			],
+			"viewport_width": "1440",
+			"inserter": true
+		},
+		{
+			"file": "patterns/page-organisation-home.php",
+			"title": "Organisation home",
+			"slug": "myds-wp/page-organisation-home",
+			"categories": [
+				"myds-pages"
+			],
+			"description": "Home page for a non-profit or community organisation: mission, figures, programmes and a call to volunteer.",
+			"keywords": [
+				"home",
+				"landing",
+				"front page",
+				"organisation",
+				"non-profit",
+				"NGO",
+				"community"
+			],
+			"block_types": [
+				"core/post-content"
+			],
+			"post_types": [
+				"page"
+			],
+			"viewport_width": "1440",
+			"inserter": true
+		},
+		{
+			"file": "patterns/page-portfolio.php",
+			"title": "Portfolio",
+			"slug": "myds-wp/page-portfolio",
+			"categories": [
+				"myds-pages"
+			],
+			"description": "Portfolio page: a grid of project cards, each with a status tag, year, summary and link.",
+			"keywords": [
+				"portfolio",
+				"projects",
+				"case studies",
+				"work",
+				"showcase"
+			],
+			"block_types": [
+				"core/post-content"
+			],
+			"post_types": [
+				"page"
+			],
+			"viewport_width": "1440",
+			"inserter": true
+		},
+		{
+			"file": "patterns/page-service.php",
+			"title": "Service",
+			"slug": "myds-wp/page-service",
+			"categories": [
+				"myds-pages"
+			],
+			"description": "Service page: summary, start button, eligibility, documents, steps, a fees table, a notice and questions.",
+			"keywords": [
+				"service",
+				"apply",
+				"application",
+				"how to",
+				"eligibility",
+				"fees",
+				"guide"
+			],
+			"block_types": [
+				"core/post-content"
+			],
+			"post_types": [
+				"page"
+			],
+			"viewport_width": "1440",
+			"inserter": true
+		},
+		{
+			"file": "patterns/panel-danger.php",
+			"title": "Panel: danger",
+			"slug": "myds-wp/panel-danger",
+			"categories": [
+				"myds"
+			],
+			"description": "A danger panel for the top of a confirmation or results page.",
+			"keywords": [
+				"panel",
+				"confirmation",
+				"result"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/panel-info.php",
+			"title": "Panel: info",
+			"slug": "myds-wp/panel-info",
+			"categories": [
+				"myds"
+			],
+			"description": "A info panel for the top of a confirmation or results page.",
+			"keywords": [
+				"panel",
+				"confirmation",
+				"result"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/panel-success.php",
+			"title": "Panel: success",
+			"slug": "myds-wp/panel-success",
+			"categories": [
+				"myds"
+			],
+			"description": "A success panel for the top of a confirmation or results page.",
+			"keywords": [
+				"panel",
+				"confirmation",
+				"result"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/panel-warning.php",
+			"title": "Panel: warning",
+			"slug": "myds-wp/panel-warning",
+			"categories": [
+				"myds"
+			],
+			"description": "A warning panel for the top of a confirmation or results page.",
+			"keywords": [
+				"panel",
+				"confirmation",
+				"result"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/phase-banner.php",
+			"title": "Phase banner",
+			"slug": "myds-wp/phase-banner",
+			"categories": [
+				"myds"
+			],
+			"description": "Tells users the stage a service is in and links to feedback. Sits under the header and scrolls with the page.",
+			"keywords": [
+				"beta",
+				"alpha",
+				"announce bar"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/table.php",
+			"title": "Table",
+			"slug": "myds-wp/table",
+			"categories": [
+				"myds"
+			],
+			"description": "A data table with a header row and a caption.",
+			"keywords": [
+				"table",
+				"data"
+			],
+			"inserter": true
+		},
+		{
+			"file": "patterns/tags.php",
+			"title": "Tags and pill",
+			"slug": "myds-wp/tags",
+			"categories": [
+				"myds"
+			],
+			"description": "Status tags in each colour, and a pill.",
+			"keywords": [
+				"tag",
+				"pill",
+				"status",
+				"badge"
+			],
+			"inserter": true
+		}
+	],
+	"block_styles": [
+		{
+			"block": "core/button",
+			"name": "primary-ghost",
+			"class": "is-style-primary-ghost",
+			"label": "Primary ghost"
+		},
+		{
+			"block": "core/button",
+			"name": "default-outline",
+			"class": "is-style-default-outline",
+			"label": "Default outline"
+		},
+		{
+			"block": "core/button",
+			"name": "default-ghost",
+			"class": "is-style-default-ghost",
+			"label": "Default ghost"
+		},
+		{
+			"block": "core/button",
+			"name": "danger-fill",
+			"class": "is-style-danger-fill",
+			"label": "Danger fill"
+		},
+		{
+			"block": "core/button",
+			"name": "danger-outline",
+			"class": "is-style-danger-outline",
+			"label": "Danger outline"
+		},
+		{
+			"block": "core/button",
+			"name": "danger-ghost",
+			"class": "is-style-danger-ghost",
+			"label": "Danger ghost"
+		},
+		{
+			"block": "core/group",
+			"name": "callout-info",
+			"class": "is-style-callout-info",
+			"label": "Callout info"
+		},
+		{
+			"block": "core/group",
+			"name": "callout-success",
+			"class": "is-style-callout-success",
+			"label": "Callout success"
+		},
+		{
+			"block": "core/group",
+			"name": "callout-warning",
+			"class": "is-style-callout-warning",
+			"label": "Callout warning"
+		},
+		{
+			"block": "core/group",
+			"name": "callout-danger",
+			"class": "is-style-callout-danger",
+			"label": "Callout danger"
+		},
+		{
+			"block": "core/group",
+			"name": "panel-info",
+			"class": "is-style-panel-info",
+			"label": "Panel info"
+		},
+		{
+			"block": "core/group",
+			"name": "panel-success",
+			"class": "is-style-panel-success",
+			"label": "Panel success"
+		},
+		{
+			"block": "core/group",
+			"name": "panel-warning",
+			"class": "is-style-panel-warning",
+			"label": "Panel warning"
+		},
+		{
+			"block": "core/group",
+			"name": "panel-danger",
+			"class": "is-style-panel-danger",
+			"label": "Panel danger"
+		},
+		{
+			"block": "core/paragraph",
+			"name": "tag",
+			"class": "is-style-tag",
+			"label": "Tag"
+		},
+		{
+			"block": "core/paragraph",
+			"name": "tag-primary",
+			"class": "is-style-tag-primary",
+			"label": "Tag primary"
+		},
+		{
+			"block": "core/paragraph",
+			"name": "tag-success",
+			"class": "is-style-tag-success",
+			"label": "Tag success"
+		},
+		{
+			"block": "core/paragraph",
+			"name": "tag-warning",
+			"class": "is-style-tag-warning",
+			"label": "Tag warning"
+		},
+		{
+			"block": "core/paragraph",
+			"name": "tag-danger",
+			"class": "is-style-tag-danger",
+			"label": "Tag danger"
+		},
+		{
+			"block": "core/paragraph",
+			"name": "pill",
+			"class": "is-style-pill",
+			"label": "Pill"
+		},
+		{
+			"block": "core/details",
+			"name": "details",
+			"class": "is-style-details",
+			"label": "Details"
+		}
+	],
+	"templates": [
+		{
+			"slug": "404",
+			"file": "templates/404.html"
+		},
+		{
+			"slug": "archive",
+			"file": "templates/archive.html"
+		},
+		{
+			"slug": "front-page",
+			"file": "templates/front-page.html"
+		},
+		{
+			"slug": "home",
+			"file": "templates/home.html"
+		},
+		{
+			"slug": "index",
+			"file": "templates/index.html"
+		},
+		{
+			"slug": "page-wide",
+			"file": "templates/page-wide.html",
+			"custom": true,
+			"title": "Full width, no title",
+			"post_types": [
+				"page"
+			]
+		},
+		{
+			"slug": "page",
+			"file": "templates/page.html"
+		},
+		{
+			"slug": "search",
+			"file": "templates/search.html"
+		},
+		{
+			"slug": "single",
+			"file": "templates/single.html"
+		}
+	],
+	"parts": [
+		{
+			"slug": "footer",
+			"file": "parts/footer.html",
+			"area": "footer",
+			"title": "Footer"
+		},
+		{
+			"slug": "header-masthead",
+			"file": "parts/header-masthead.html",
+			"area": "header",
+			"title": "Header with government masthead"
+		},
+		{
+			"slug": "header",
+			"file": "parts/header.html",
+			"area": "header",
+			"title": "Header"
+		}
+	],
+	"variations": [
+		{
+			"slug": "green",
+			"title": "Green",
+			"file": "styles/green.json",
+			"primary_600": "#16a34a"
+		},
+		{
+			"slug": "red",
+			"title": "Red",
+			"file": "styles/red.json",
+			"primary_600": "#dc2626"
+		}
+	],
+	"tokens": {
+		"colors": [
+			{
+				"slug": "bg-white",
+				"name": "Background",
+				"css": "var(--wp--preset--color--bg-white)",
+				"token": "var(--myds-bg-white)"
+			},
+			{
+				"slug": "bg-washed",
+				"name": "Background washed",
+				"css": "var(--wp--preset--color--bg-washed)",
+				"token": "var(--myds-bg-washed)"
+			},
+			{
+				"slug": "bg-gray-50",
+				"name": "Background gray 50",
+				"css": "var(--wp--preset--color--bg-gray-50)",
+				"token": "var(--myds-bg-gray-50)"
+			},
+			{
+				"slug": "bg-dialog",
+				"name": "Background dialog",
+				"css": "var(--wp--preset--color--bg-dialog)",
+				"token": "var(--myds-bg-dialog)"
+			},
+			{
+				"slug": "txt-black-900",
+				"name": "Text 900",
+				"css": "var(--wp--preset--color--txt-black-900)",
+				"token": "var(--myds-txt-black-900)"
+			},
+			{
+				"slug": "txt-black-700",
+				"name": "Text 700",
+				"css": "var(--wp--preset--color--txt-black-700)",
+				"token": "var(--myds-txt-black-700)"
+			},
+			{
+				"slug": "txt-black-500",
+				"name": "Text 500",
+				"css": "var(--wp--preset--color--txt-black-500)",
+				"token": "var(--myds-txt-black-500)"
+			},
+			{
+				"slug": "txt-primary",
+				"name": "Text primary",
+				"css": "var(--wp--preset--color--txt-primary)",
+				"token": "var(--myds-txt-primary)"
+			},
+			{
+				"slug": "txt-success",
+				"name": "Text success",
+				"css": "var(--wp--preset--color--txt-success)",
+				"token": "var(--myds-txt-success)"
+			},
+			{
+				"slug": "txt-warning",
+				"name": "Text warning",
+				"css": "var(--wp--preset--color--txt-warning)",
+				"token": "var(--myds-txt-warning)"
+			},
+			{
+				"slug": "txt-danger",
+				"name": "Text danger",
+				"css": "var(--wp--preset--color--txt-danger)",
+				"token": "var(--myds-txt-danger)"
+			},
+			{
+				"slug": "bg-primary-50",
+				"name": "Primary 50",
+				"css": "var(--wp--preset--color--bg-primary-50)",
+				"token": "var(--myds-bg-primary-50)"
+			},
+			{
+				"slug": "bg-primary-100",
+				"name": "Primary 100",
+				"css": "var(--wp--preset--color--bg-primary-100)",
+				"token": "var(--myds-bg-primary-100)"
+			},
+			{
+				"slug": "primary-600",
+				"name": "Primary 600",
+				"css": "var(--wp--preset--color--primary-600)",
+				"token": "var(--myds-primary-600)"
+			},
+			{
+				"slug": "primary-700",
+				"name": "Primary 700",
+				"css": "var(--wp--preset--color--primary-700)",
+				"token": "var(--myds-primary-700)"
+			},
+			{
+				"slug": "bg-success-50",
+				"name": "Success 50",
+				"css": "var(--wp--preset--color--bg-success-50)",
+				"token": "var(--myds-bg-success-50)"
+			},
+			{
+				"slug": "success-600",
+				"name": "Success 600",
+				"css": "var(--wp--preset--color--success-600)",
+				"token": "var(--myds-success-600)"
+			},
+			{
+				"slug": "bg-warning-50",
+				"name": "Warning 50",
+				"css": "var(--wp--preset--color--bg-warning-50)",
+				"token": "var(--myds-bg-warning-50)"
+			},
+			{
+				"slug": "warning-600",
+				"name": "Warning 600",
+				"css": "var(--wp--preset--color--warning-600)",
+				"token": "var(--myds-warning-600)"
+			},
+			{
+				"slug": "bg-danger-50",
+				"name": "Danger 50",
+				"css": "var(--wp--preset--color--bg-danger-50)",
+				"token": "var(--myds-bg-danger-50)"
+			},
+			{
+				"slug": "danger-600",
+				"name": "Danger 600",
+				"css": "var(--wp--preset--color--danger-600)",
+				"token": "var(--myds-danger-600)"
+			},
+			{
+				"slug": "otl-divider",
+				"name": "Outline divider",
+				"css": "var(--wp--preset--color--otl-divider)",
+				"token": "var(--myds-otl-divider)"
+			},
+			{
+				"slug": "otl-gray-200",
+				"name": "Outline 200",
+				"css": "var(--wp--preset--color--otl-gray-200)",
+				"token": "var(--myds-otl-gray-200)"
+			},
+			{
+				"slug": "otl-gray-300",
+				"name": "Outline 300",
+				"css": "var(--wp--preset--color--otl-gray-300)",
+				"token": "var(--myds-otl-gray-300)"
+			},
+			{
+				"slug": "white",
+				"name": "White",
+				"css": "var(--wp--preset--color--white)",
+				"token": "var(--myds-white)"
+			}
+		],
+		"font_families": [
+			{
+				"slug": "heading",
+				"name": "Poppins"
+			},
+			{
+				"slug": "body",
+				"name": "Inter"
+			},
+			{
+				"slug": "mono",
+				"name": "Mono"
+			}
+		],
+		"font_sizes": [
+			{
+				"slug": "body-xs",
+				"name": "Body XS",
+				"size": "0.75rem"
+			},
+			{
+				"slug": "body-sm",
+				"name": "Body SM",
+				"size": "0.875rem"
+			},
+			{
+				"slug": "body-md",
+				"name": "Body MD",
+				"size": "1rem"
+			},
+			{
+				"slug": "body-lg",
+				"name": "Body LG",
+				"size": "1.125rem"
+			},
+			{
+				"slug": "body-xl",
+				"name": "Body XL",
+				"size": "1.25rem"
+			},
+			{
+				"slug": "heading-2xs",
+				"name": "Heading 2XS",
+				"size": "1.25rem"
+			},
+			{
+				"slug": "heading-xs",
+				"name": "Heading XS",
+				"size": "1.5rem"
+			},
+			{
+				"slug": "heading-sm",
+				"name": "Heading SM",
+				"size": "1.875rem"
+			},
+			{
+				"slug": "heading-md",
+				"name": "Heading MD",
+				"size": "2.25rem"
+			},
+			{
+				"slug": "heading-lg",
+				"name": "Heading LG",
+				"size": "3rem"
+			},
+			{
+				"slug": "heading-xl",
+				"name": "Heading XL",
+				"size": "3.75rem"
+			}
+		],
+		"spacing": [
+			{
+				"slug": "4",
+				"size": "0.25rem"
+			},
+			{
+				"slug": "8",
+				"size": "0.5rem"
+			},
+			{
+				"slug": "12",
+				"size": "0.75rem"
+			},
+			{
+				"slug": "16",
+				"size": "1rem"
+			},
+			{
+				"slug": "20",
+				"size": "1.25rem"
+			},
+			{
+				"slug": "24",
+				"size": "1.5rem"
+			},
+			{
+				"slug": "32",
+				"size": "2rem"
+			},
+			{
+				"slug": "40",
+				"size": "2.5rem"
+			},
+			{
+				"slug": "48",
+				"size": "3rem"
+			},
+			{
+				"slug": "64",
+				"size": "4rem"
+			}
+		],
+		"radius": [
+			{
+				"slug": "xs",
+				"size": "4px"
+			},
+			{
+				"slug": "sm",
+				"size": "6px"
+			},
+			{
+				"slug": "md",
+				"size": "8px"
+			},
+			{
+				"slug": "lg",
+				"size": "12px"
+			},
+			{
+				"slug": "xl",
+				"size": "14px"
+			},
+			{
+				"slug": "full",
+				"size": "9999px"
+			}
+		],
+		"shadows": [
+			{
+				"slug": "button",
+				"name": "Button"
+			},
+			{
+				"slug": "card",
+				"name": "Card"
+			},
+			{
+				"slug": "context-menu",
+				"name": "Context menu"
+			}
+		],
+		"layout": {
+			"contentSize": "640px",
+			"wideSize": "1280px"
+		},
+		"grid_classes": {
+			"container": "myds-grid",
+			"mobile": "myds-col-1 to myds-col-4 (4 columns, below 768px)",
+			"tablet": "myds-col-md-1 to myds-col-md-8, myds-start-md-1 to myds-start-md-8 (8 columns, 768px and up)",
+			"desktop": "myds-col-lg-1 to myds-col-lg-12, myds-start-lg-1 to myds-start-lg-12 (12 columns, 1024px and up)"
+		}
+	}
+}

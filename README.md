@@ -20,7 +20,31 @@ MYDS WP is an independent, community project based on the public [govtechmy/myds
 | Table | Table block. |
 | Tag, Pill | Paragraph block styles. Post categories and tags use the tag automatically. |
 | Breadcrumb, Pagination, Skip link | Core Breadcrumbs, Query Pagination and the WordPress skip link, restyled. |
-| Phase banner, Masthead, Navbar, Footer | Patterns in the MYDS category. The masthead is optional and for government sites only. |
+| Phase banner, Masthead, Navbar, Footer | Patterns in the MYDS category, and two header template parts (with and without the masthead). The masthead is optional and for government sites only. |
+
+## Starter pages
+
+Creating a new page offers nine starters in the "Choose a pattern" window, under the MYDS pages category:
+
+| Starter | Contents |
+| --- | --- |
+| Agency home | Hero, popular services, a notice, latest news and a help band |
+| Organisation home | Hero, key figures, programmes and a call to volunteer |
+| Service | Summary, eligibility, documents, steps, fees, a notice and questions |
+| News | Three-column grid of the latest posts with pagination |
+| Blog | Single-column list of posts with pagination |
+| Portfolio | Project cards with status, year and summary |
+| About | Vision and mission, functions and leadership |
+| Contact | Address, call centre, counter hours and other channels |
+| Frequently asked questions | Questions grouped under headings in accordions |
+
+The two home starters carry their own page heading, so use them on the front page or with the "Full width, no title" template. The theme also provides the standard templates: front page, blog home, index, page, single post, archive, search and 404.
+
+## For AI agents
+
+- `AGENTS.md` tells a coding agent how to build pages with the theme and how to work on this repository.
+- `docs/catalog.json` and `docs/CATALOG.md` list every pattern, block style, template, template part, style variation and design token. Both are generated from the theme files.
+- `skills/myds-wp/` is a skill that an agent can install. For Claude Code, copy the folder to `~/.claude/skills/myds-wp/`.
 
 ## Your own brand colour
 
@@ -43,13 +67,17 @@ Save it as `styles/my-brand.json` in a child theme and choose it under Appearanc
 
 ## Development
 
-`theme.json`, `assets/css/tokens.css` and `styles/*.json` are generated. Edit `tools/build.py`, then:
+`theme.json`, `assets/css/tokens.css`, `styles/*.json` and `docs/catalog.*` are generated. Edit `tools/build.py` or `tools/tokens.json`, then run:
 
 ```
-uv run --no-project tools/build.py
+python3 tools/build.py
 ```
 
-To follow a newer MYDS release, update the values in `tools/tokens.json` and run it again.
+The build uses the Python standard library only. It fails if a pattern has no description or keywords.
+
+## Following MYDS
+
+`tools/tokens.json` records which version of `@govtechmy/myds-style` its values come from. Every Monday, the workflow in `.github/workflows/upstream.yml` compares those values with the latest version on npm. When they differ, it regenerates the theme files and opens a pull request that lists each changed token. A maintainer reviews and merges it. To run the same comparison locally, use `python3 tools/sync_upstream.py --check`.
 
 `demo/seed.php` fills a fresh site with demo pages: `wp eval-file wp-content/themes/myds-wp/demo/seed.php`.
 

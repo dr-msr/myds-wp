@@ -4,6 +4,7 @@
  * Slug: myds-wp/footer
  * Categories: footer, myds
  * Block Types: core/template-part/footer
+ * Keywords: footer, links, copyright, social
  * Description: Site information, link groups, copyright and legal links.
  *
  * @package myds-wp

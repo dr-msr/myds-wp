@@ -600,9 +600,9 @@ kbd {
 }
 
 .wp-block-table td {
-	padding: 6px 12px 6px 0;
+	padding: 12px 12px 12px 0;
 	border-bottom: 1px solid var(--myds-otl-gray-200);
-	line-height: 33px;
+	line-height: 1.25rem;
 	color: var(--myds-txt-black-900);
 }
 
@@ -1621,4 +1621,19 @@ label {
 
 .myds-post-meta > * {
 	margin: 0;
+}
+
+/* Single-column post list, used by the Blog starter. */
+.myds-post-list .wp-block-post-template > li + li {
+	padding-block-start: 24px;
+	border-top: 1px solid var(--myds-otl-gray-200);
+}
+
+.myds-post-list .myds-post-card .wp-block-post-title {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+.myds-post-list .myds-post-card .wp-block-post-excerpt__excerpt {
+	-webkit-line-clamp: 4;
 }
