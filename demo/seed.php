@@ -66,29 +66,71 @@ foreach ( array( 'hello-world', 'sample-page', 'privacy-policy' ) as $default_sl
 	}
 }
 
-$phase = '<!-- wp:pattern {"slug":"myds-wp/phase-banner"} /-->';
+$showcase = (bool) getenv( 'MYDS_SHOWCASE' );
+$phase    = '<!-- wp:pattern {"slug":"myds-wp/phase-banner"} /-->';
+$parts    = file_get_contents( "$dir/components.html" );
 
-$home       = $upsert( 'page', 'home', 'Home', $phase . "\n\n" . $pattern( 'page-agency-home' ), array( 'menu_order' => 0 ) );
-$services   = $upsert( 'page', 'renew-a-licence', 'Renew a licence', $pattern( 'page-service' ), array( 'menu_order' => 1 ) );
-$news       = $upsert( 'page', 'news', 'News', $pattern( 'page-news' ), array( 'menu_order' => 2 ) );
-$blog       = $upsert( 'page', 'blog', 'Blog', $pattern( 'page-blog' ), array( 'menu_order' => 3 ) );
-$portfolio  = $upsert( 'page', 'portfolio', 'Portfolio', $pattern( 'page-portfolio' ), array( 'menu_order' => 4 ) );
-$about      = $upsert( 'page', 'about', 'About', $pattern( 'page-about' ), array( 'menu_order' => 5 ) );
-$upsert( 'page', 'contact', 'Contact', $pattern( 'page-contact' ), array( 'menu_order' => 0, 'post_parent' => $about ) );
-$upsert( 'page', 'faq', 'Frequently asked questions', $pattern( 'page-faq' ), array( 'menu_order' => 1, 'post_parent' => $about ) );
-$upsert( 'page', 'organisation', 'Organisation home', $pattern( 'page-organisation-home' ), array( 'menu_order' => 2, 'post_parent' => $about ) );
-$upsert( 'page', 'components', 'Components', file_get_contents( "$dir/components.html" ), array( 'menu_order' => 6 ) );
+if ( $showcase ) {
+	// Public showcase: the theme's own home page, starters under /starters/, no government masthead.
+	$parts      = preg_replace( '#<!-- wp:heading -->\s*<h2 class="wp-block-heading">Government masthead</h2>.*?(?=<!-- wp:heading -->\s*<h2)#s', '', $parts );
+	$home       = $upsert( 'page', 'home', 'Home', file_get_contents( "$dir/showcase-home.html" ), array( 'menu_order' => 0 ) );
+	$components = $upsert( 'page', 'components', 'Components', $parts, array( 'menu_order' => 1 ) );
+	$starters   = $upsert( 'page', 'starters', 'Starters', '', array( 'menu_order' => 2 ) );
+	$children   = array(
+		array( 'agency-home', 'Agency home', 'page-agency-home', 'page-wide' ),
+		array( 'organisation-home', 'Organisation home', 'page-organisation-home', 'page-wide' ),
+		array( 'renew-a-licence', 'Renew a licence', 'page-service', '' ),
+		array( 'news', 'News', 'page-news', '' ),
+		array( 'blog', 'Blog', 'page-blog', '' ),
+		array( 'portfolio', 'Portfolio', 'page-portfolio', '' ),
+		array( 'about', 'About', 'page-about', '' ),
+		array( 'contact', 'Contact', 'page-contact', '' ),
+		array( 'faq', 'Frequently asked questions', 'page-faq', '' ),
+	);
+	$nav_children = '';
+	foreach ( $children as $i => $child ) {
+		$id = $upsert( 'page', $child[0], $child[1], $pattern( $child[2] ), array( 'menu_order' => $i, 'post_parent' => $starters ) );
+		update_post_meta( $id, '_wp_page_template', $child[3] );
+		$nav_children .= '<!-- wp:navigation-link ' . wp_json_encode( array( 'label' => $child[1], 'type' => 'page', 'id' => $id, 'url' => get_permalink( $id ), 'kind' => 'post-type' ) ) . " /-->\n";
+	}
+	$starter_html = "<!-- wp:paragraph -->\n<p>Nine page layouts that ship with the theme. Each one appears in the pattern picker when you create a new page.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\">";
+	foreach ( $children as $child ) {
+		$starter_html .= "<!-- wp:list-item -->\n<li><a href=\"" . esc_url( home_url( "/starters/{$child[0]}/" ) ) . "\">{$child[1]}</a></li>\n<!-- /wp:list-item -->";
+	}
+	$upsert( 'page', 'starters', 'Starters', $starter_html . "</ul>\n<!-- /wp:list -->", array( 'menu_order' => 2 ) );
+
+	$nav = '<!-- wp:navigation-link ' . wp_json_encode( array( 'label' => 'Home', 'type' => 'page', 'id' => $home, 'url' => home_url( '/' ), 'kind' => 'post-type' ) ) . " /-->\n"
+		. '<!-- wp:navigation-link ' . wp_json_encode( array( 'label' => 'Components', 'type' => 'page', 'id' => $components, 'url' => get_permalink( $components ), 'kind' => 'post-type' ) ) . " /-->\n"
+		. '<!-- wp:navigation-submenu ' . wp_json_encode( array( 'label' => 'Starters', 'type' => 'page', 'id' => $starters, 'url' => get_permalink( $starters ), 'kind' => 'post-type' ) ) . " -->\n" . $nav_children . "<!-- /wp:navigation-submenu -->\n"
+		. '<!-- wp:navigation-link ' . wp_json_encode( array( 'label' => 'GitHub', 'url' => 'https://github.com/dr-msr/myds-wp', 'kind' => 'custom' ) ) . " /-->\n";
+	$upsert( 'wp_navigation', 'myds-wp-showcase', 'Showcase menu', $nav );
+
+	$footer_id = $upsert( 'wp_template_part', 'footer', 'Footer', file_get_contents( "$dir/showcase-footer.html" ) );
+	wp_set_object_terms( $footer_id, 'myds-wp', 'wp_theme' );
+	wp_set_object_terms( $footer_id, 'footer', 'wp_template_part_area' );
+} else {
+	$home     = $upsert( 'page', 'home', 'Home', $phase . "\n\n" . $pattern( 'page-agency-home' ), array( 'menu_order' => 0 ) );
+	$services = $upsert( 'page', 'renew-a-licence', 'Renew a licence', $pattern( 'page-service' ), array( 'menu_order' => 1 ) );
+	$upsert( 'page', 'news', 'News', $pattern( 'page-news' ), array( 'menu_order' => 2 ) );
+	$upsert( 'page', 'blog', 'Blog', $pattern( 'page-blog' ), array( 'menu_order' => 3 ) );
+	$upsert( 'page', 'portfolio', 'Portfolio', $pattern( 'page-portfolio' ), array( 'menu_order' => 4 ) );
+	$about = $upsert( 'page', 'about', 'About', $pattern( 'page-about' ), array( 'menu_order' => 5 ) );
+	$upsert( 'page', 'contact', 'Contact', $pattern( 'page-contact' ), array( 'menu_order' => 0, 'post_parent' => $about ) );
+	$upsert( 'page', 'faq', 'Frequently asked questions', $pattern( 'page-faq' ), array( 'menu_order' => 1, 'post_parent' => $about ) );
+	$upsert( 'page', 'organisation', 'Organisation home', $pattern( 'page-organisation-home' ), array( 'menu_order' => 2, 'post_parent' => $about ) );
+	$upsert( 'page', 'components', 'Components', $parts, array( 'menu_order' => 6 ) );
+	update_post_meta( get_page_by_path( 'about/organisation' )->ID, '_wp_page_template', 'page-wide' );
+}
 
 update_post_meta( $home, '_wp_page_template', '' );
-update_post_meta( get_page_by_path( 'about/organisation' )->ID, '_wp_page_template', 'page-wide' );
 
 // Settings: Malaysian defaults, read back after the seed.
 update_option( 'show_on_front', 'page' );
 update_option( 'page_on_front', $home );
 update_option( 'page_for_posts', 0 );
 update_option( 'posts_per_page', 6 );
-update_option( 'blogname', 'Jabatan Contoh' );
-update_option( 'blogdescription', 'Licences, permits and counter services' );
+update_option( 'blogname', $showcase ? 'MYDS-WP' : 'Jabatan Contoh' );
+update_option( 'blogdescription', $showcase ? 'A WordPress block theme for MYDS' : 'Licences, permits and counter services' );
 update_option( 'timezone_string', 'Asia/Kuala_Lumpur' );
 update_option( 'gmt_offset', '' );
 update_option( 'date_format', 'd/m/Y' );
@@ -99,7 +141,7 @@ update_option( 'default_comment_status', 'closed' );
 update_option( 'default_ping_status', 'closed' );
 update_option( 'default_pingback_flag', 0 );
 update_option( 'users_can_register', 0 );
-update_option( 'blog_public', 0 );
+update_option( 'blog_public', $showcase ? 1 : 0 );
 
 if ( ! get_option( 'site_icon' ) || ! get_post( (int) get_option( 'site_icon' ) ) ) {
 	require_once ABSPATH . 'wp-admin/includes/image.php';
