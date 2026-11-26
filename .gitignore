@@ -1,0 +1,6 @@
+BRIEF.md
+.claude/
+node_modules/
+*.log
+.DS_Store
+.local/
