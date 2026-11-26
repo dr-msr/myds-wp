@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check the tag matches the theme version
+        run: |
+          version=$(sed -n 's/^Version: *//p' style.css)
+          stable=$(sed -n 's/^Stable tag: *//p' readme.txt)
+          test "v$version" = "$GITHUB_REF_NAME" || { echo "style.css says $version, tag is $GITHUB_REF_NAME"; exit 1; }
+          test "$stable" = "$version" || { echo "readme.txt Stable tag $stable does not match $version"; exit 1; }
+
+      - name: Check the generated files are current
+        run: |
+          python3 tools/build.py
+          git diff --exit-code
+
+      - name: Build the theme zip
+        run: python3 tools/package.py
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/myds-wp.zip \
+            --title "MYDS WP $GITHUB_REF_NAME" \
+            --notes "Install: download myds-wp.zip below, then in WordPress go to Appearance, Themes, Add New Theme, Upload Theme, choose the file and activate it. Requires WordPress 7.1 or later."

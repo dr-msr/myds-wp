@@ -20,9 +20,7 @@
 <!-- wp:site-title {"level":0} /--></div>
 <!-- /wp:group -->
 
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Level 1, Block A, Federal Government Administrative Centre, 62000 Putrajaya', 'myds-wp' ); ?></p>
-<!-- /wp:paragraph -->
+<!-- wp:site-tagline /-->
 
 <!-- wp:social-links {"className":"is-style-logos-only"} -->
 <ul class="wp-block-social-links is-style-logos-only"><!-- wp:social-link {"url":"#","service":"facebook"} /-->
@@ -105,7 +103,7 @@ printf( esc_html__( 'All Rights Reserved © %s', 'myds-wp' ), esc_html( wp_date(
 <!-- wp:paragraph -->
 <p><?php
 /* translators: %s: the date the site was last changed. */
-printf( esc_html__( 'Last updated: %s', 'myds-wp' ), esc_html( wp_date( get_option( 'date_format' ), (int) get_lastpostmodified( 'U' ) ?: time() ) ) );
+printf( esc_html__( 'Last updated: %s', 'myds-wp' ), esc_html( wp_date( get_option( 'date_format' ), (int) strtotime( (string) get_lastpostmodified( 'gmt' ) . ' UTC' ) ?: time() ) ) );
 ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>

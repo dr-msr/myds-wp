@@ -212,6 +212,36 @@
 			"inserter": true
 		},
 		{
+			"file": "patterns/hidden-404.php",
+			"title": "Page not found",
+			"slug": "myds-wp/hidden-404",
+			"categories": [
+				"myds"
+			],
+			"description": "Heading, message and search form for the 404 template.",
+			"keywords": [
+				"404",
+				"not found",
+				"error"
+			],
+			"inserter": false
+		},
+		{
+			"file": "patterns/hidden-no-results.php",
+			"title": "No results",
+			"slug": "myds-wp/hidden-no-results",
+			"categories": [
+				"myds"
+			],
+			"description": "Message shown by a query when it finds no posts.",
+			"keywords": [
+				"no results",
+				"empty",
+				"nothing found"
+			],
+			"inserter": false
+		},
+		{
 			"file": "patterns/masthead.php",
 			"title": "Government masthead",
 			"slug": "myds-wp/masthead",
@@ -695,10 +725,6 @@
 		{
 			"slug": "archive",
 			"file": "templates/archive.html"
-		},
-		{
-			"slug": "front-page",
-			"file": "templates/front-page.html"
 		},
 		{
 			"slug": "home",

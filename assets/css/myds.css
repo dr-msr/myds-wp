@@ -1637,3 +1637,200 @@ label {
 .myds-post-list .myds-post-card .wp-block-post-excerpt__excerpt {
 	-webkit-line-clamp: 4;
 }
+
+/* ------------------------------------------------------------- comments */
+
+.myds-comments {
+	margin-block-start: 48px;
+	padding-block-start: 24px;
+	border-top: 1px solid var(--myds-otl-gray-200);
+}
+
+.myds-comments .wp-block-comments-title {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+.myds-comments .wp-block-comment-template {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.myds-comments .wp-block-comment-template li.comment > ol {
+	margin: 0;
+	padding-inline-start: 24px;
+	list-style: none;
+	border-inline-start: 2px solid var(--myds-otl-divider);
+}
+
+.myds-comment {
+	padding-block: 16px;
+	border-bottom: 1px solid var(--myds-otl-divider);
+}
+
+.myds-comment > * + * {
+	margin-block-start: 8px;
+}
+
+.myds-comment__meta {
+	gap: 8px;
+	align-items: center;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+.myds-comment__meta .wp-block-avatar img {
+	border-radius: 9999px;
+}
+
+.myds-comment__meta .wp-block-comment-author-name {
+	font-weight: 600;
+	color: var(--myds-txt-black-900);
+}
+
+.myds-comment__meta .wp-block-comment-author-name a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.myds-comment__meta .wp-block-comment-date,
+.myds-comment__meta .wp-block-comment-date a {
+	color: var(--myds-txt-black-500);
+	text-decoration: none;
+}
+
+.myds-comment .wp-block-comment-content {
+	color: var(--myds-txt-black-700);
+}
+
+.myds-comment__actions {
+	gap: 12px;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 500;
+}
+
+.myds-comments .comment-respond {
+	margin-block-start: 32px;
+}
+
+.myds-comments .comment-form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.myds-comments .comment-form > p:not(.logged-in-as):not(.comment-notes) {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin: 0;
+}
+
+.myds-comments .comment-form .comment-form-cookies-consent {
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.myds-comments .comment-form textarea,
+.myds-comments .comment-form input:not([type="submit"]):not([type="checkbox"]) {
+	width: 100%;
+}
+
+.myds-comments .comment-reply-title small {
+	margin-inline-start: 8px;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.myds-comments .comment-notes,
+.myds-comments .logged-in-as {
+	margin: 0;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	color: var(--myds-txt-black-500);
+}
+
+/* Long lines in user content scroll inside their box instead of widening the page. */
+pre {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.wp-block-post-content,
+.wp-block-comment-content {
+	overflow-wrap: break-word;
+}
+
+.wp-block-comment-content table {
+	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+/* Sticky posts in a list stand out with the primary colour. */
+.wp-block-post.sticky .myds-post-card {
+	padding-inline-start: 16px;
+	border-inline-start: 4px solid var(--myds-primary-600);
+}
+
+/* Images from older content carry fixed widths; keep them inside the column. */
+img,
+video,
+iframe,
+.wp-caption {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+.alignleft {
+	float: left;
+	margin-inline-end: 1.5rem;
+}
+
+.alignright {
+	float: right;
+	margin-inline-start: 1.5rem;
+}
+
+.aligncenter {
+	display: block;
+	margin-inline: auto;
+}
+
+.wp-caption-text {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	color: var(--myds-txt-black-500);
+}
+
+/* Very long words in titles and navigation wrap instead of widening the page. */
+.wp-block-post-title,
+.wp-block-query-title,
+.myds-post-nav .wp-block-post-navigation-link {
+	min-width: 0;
+	max-width: 100%;
+	overflow-wrap: anywhere;
+}
+
+.wp-block-comment-content :is(h1, h2, h3, h4, h5, h6) {
+	font-family: var(--wp--preset--font-family--body);
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+/* Core removes list markers inside the comment list; give them back to lists that people write in a comment. */
+.wp-block-comment-content ol {
+	padding-inline-start: 1.5rem;
+	list-style: decimal;
+}
+
+.wp-block-comment-content ul {
+	padding-inline-start: 1.5rem;
+	list-style: disc;
+}

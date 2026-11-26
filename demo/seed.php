@@ -122,7 +122,7 @@ if ( $showcase ) {
 	update_post_meta( get_page_by_path( 'about/organisation' )->ID, '_wp_page_template', 'page-wide' );
 }
 
-update_post_meta( $home, '_wp_page_template', '' );
+update_post_meta( $home, '_wp_page_template', 'page-wide' );
 
 // Settings: Malaysian defaults, read back after the seed.
 update_option( 'show_on_front', 'page' );

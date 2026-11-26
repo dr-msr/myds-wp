@@ -4,6 +4,16 @@ A WordPress block theme that implements [MYDS](https://design.digital.gov.my), t
 
 MYDS WP is an independent, community project based on the public [govtechmy/myds](https://github.com/govtechmy/myds) repository. It is not affiliated with or endorsed by the Government of Malaysia. The upstream repository carries no stated licence at present; `NOTICE.md` sets out what this theme takes from MYDS, and issues and discussion on that point are welcome.
 
+## Installation
+
+1. Download [myds-wp.zip](https://github.com/dr-msr/myds-wp/releases/latest/download/myds-wp.zip) from the latest release.
+2. In WordPress, go to Appearance, Themes, Add New Theme, then Upload Theme.
+3. Choose `myds-wp.zip`, select Install Now, then Activate.
+
+The theme requires WordPress 7.1 or later. Updates come as new releases: upload the new zip the same way and WordPress offers to replace the installed version.
+
+A live demo runs at [myds-wp.drmsr.dev](https://myds-wp.drmsr.dev).
+
 ## What is in it
 
 | MYDS | In WordPress |
@@ -74,6 +84,8 @@ python3 tools/build.py
 ```
 
 The build uses the Python standard library only. It fails if a pattern has no description or keywords.
+
+`python3 tools/package.py` builds `dist/myds-wp.zip`, the installable theme, from an allowlist of theme files. Pushing a tag such as `v0.1.1` runs `.github/workflows/release.yml`, which checks that the tag matches the version in `style.css` and `readme.txt`, builds the zip and publishes the release.
 
 ## Following MYDS
 

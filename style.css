@@ -1,7 +1,7 @@
 /*
 Theme Name: MYDS WP
-Theme URI: https://github.com/dr-msr/myds-wp
-Author: DRMSR Digital & Health Solutions
+Theme URI: https://myds-wp.drmsr.dev
+Author: drmsr
 Author URI: https://drmsr.dev
 Description: A WordPress block theme that implements MYDS, the Malaysia Government Design System: colour tokens in light and dark, Poppins and Inter, the MYDS type, spacing, radius and shadow scales, the 12-8-4 grid, and block styles and patterns for the MYDS components. An independent community project, not affiliated with or endorsed by the Government of Malaysia.
 Requires at least: 7.1
@@ -11,5 +11,5 @@ Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: myds-wp
-Tags: block-patterns, block-styles, full-site-editing, style-variations, wide-blocks, editor-style, custom-colors, custom-logo, custom-menu, translation-ready
+Tags: block-patterns, block-styles, full-site-editing, style-variations, wide-blocks, editor-style, custom-colors, translation-ready
 */
